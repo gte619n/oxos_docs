@@ -1,0 +1,71 @@
+@startuml
+' robust "Web Browser" as WB
+' concise "Web User" as WU
+
+' @0
+' WU is Idle
+' WB is Idle
+
+' @5
+' WU is Waiting
+' WB is Processing
+
+' @8
+' WB is Waiting
+
+clock clk2 with period 20 pulse 10
+clock clk3 with period 60 pulse 20
+scale 400 as 750 pixels
+
+
+
+
+@enduml
+
+binary "Emission" as EN
+
+
+
+@0
+EN is high
+@50
+EN is low
+@100
+EN is high
+
+@150
+EN is low
+@200
+EN is high
+@250
+EN is low
+@300
+EN is high
+@350
+EN is low
+@400
+EN is high
+@450
+EN is low
+@500
+EN is high
+@550
+EN is low
+@600
+EN is high
+@650
+EN is low
+@700
+EN is high
+@750
+EN is low
+@800
+EN is high
+@850
+EN is low
+@900
+EN is high
+@950
+EN is low
+@1000
+EN is low

@@ -1,0 +1,23 @@
+@startuml
+    skinparam monochrome true
+    autonumber
+
+    participant "OXOS" as oxos
+    participant "AI Provider" as ai
+    participant "Hospital IT" as it
+    participant "Radiology" as rad
+    participant "Value Commitee" as vc
+    participant "Patient" as p
+    participant "NP/RadTech" as np
+
+    ai -> rad: Engage Champion
+    ai --> oxos: Enable AI
+    ai --> rad: Begin AI Trial
+    p --> p: Present at Facility
+    np --> p: Capture Radiographs
+    np --> np: AI Interprets Radiographs
+    np --> rad: Send Radiographs and Study to PACS
+    np -> p: Review with Patient
+    ai -> vc: Begin Sales Process
+
+@enduml

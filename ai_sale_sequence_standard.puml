@@ -1,0 +1,35 @@
+@startuml
+    skinparam monochrome true
+    autonumber
+
+    participant "AI Provider" as ai
+    participant "FDA" as fda
+    participant "Hospital IT" as it
+    participant "Radiology" as rad
+    participant "Value Commitee" as vc
+    participant "Patient" as p
+    participant "NP/RadTech" as np
+
+    ai -> rad: Engage Champion
+    rad --> it: Start Integration
+    it -> it: Security Audit
+    ai -> it: On-site Server Installation
+    ai -> it: On-site Server Integration
+    it -> it: Server to PACS Integration
+    it -> vc: Workflow Analysis
+    rad --> it: Device Compatibility Analysis
+    it --> ai: Device Review
+    ai --> fda: Device Validation
+    fda --> ai: Device Clearance
+    it --> it: PACS Client Integration
+    it --> np: Process Training
+    p --> p: Present at Facility
+    np --> p: Capture Radiographs
+    np --> np: Tag Radiographs for AI Read
+    np --> rad: Send Radiographs to PACS
+    rad -> rad: Review Study w/AI
+    rad -> np: Return Study with Report
+    np -> p: Review with Patient
+    ai -> vc: Being Sales Process
+
+@enduml
